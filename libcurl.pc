@@ -1,0 +1,14 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libcurl
+Description: Curl
+Url: https://www.postgresql.org/
+Version: 8.1.2
+Requires:
+Requires.private: libssl libcrypto
+Cflags: -I${includedir}
+Libs: -L${libdir} -lcurl
+Libs.private: -L/usr/lib/llvm14/lib -lpgcommon -lpgport -lm
