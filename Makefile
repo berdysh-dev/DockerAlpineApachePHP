@@ -16,12 +16,9 @@ run2:
 
 run:
 	docker run \
--v /usr/local/GIT/PgSQL:/var/lib/postgresql \
--v /usr/local/GIT/MySQL:/var/lib/mysql \
--v /usr/local/GIT/DockerHomePage/www:/var/www/html \
--p 9000:9000 \
--p 2222:2222 \
--p 16379:16379 \
+-p 443:443 \
+-p 80:80 \
+-v /etc:/usr/local/etc \
 `${PHP} DockerUtil.php -ImageID ${TAG}`
 
 stop:
